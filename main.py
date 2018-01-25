@@ -21,7 +21,7 @@ EXPLORE = 150
 
 # REMBER ACTOR CRITIC IS ON POLICY ALGORITHM
 
-def actor_critic(epochs=1000, GAMMA = 0.99, train_indicator=True, render=False, temp = False):
+def actor_critic(epochs=1000, GAMMA = 0.99, train_indicator=True, render=False, temp=False):
     with tf.Session() as sess:
         
         
@@ -71,7 +71,7 @@ def actor_critic(epochs=1000, GAMMA = 0.99, train_indicator=True, render=False, 
                 ep_reward = ep_reward + reward
                        
             #print(step,'action', action, 'state', robot.uncodedstate,'r', round(reward,3), 'prob', action_prob)
-            print("episode" i+1,'Steps', step,'Reward:',ep_reward,'goal achieved:', robot.goal, 'Efficiency', round(100.*((robot.goal)/(i+1.)),0), '%' )
+            print('episode', i+1,'Steps', step,'Reward:',ep_reward,'goal achieved:', robot.goal,'Efficiency', round(100.*((robot.goal)/(i+1.)),0), '%' )
             
             
             
