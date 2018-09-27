@@ -3,14 +3,11 @@ import tensorflow as tf
 from actor import ActorNetwork
 from critic import CriticNetwork
 from robots import gym_environment
-import gym
-from gym.envs.registration import register, spec
-import time
 
 # Base learning rate for the Actor network
-ACTOR_LEARNING_RATE = 0.0001
+ACTOR_LEARNING_RATE = 0.001
 # Base learning rate for the Critic Network
-CRITIC_LEARNING_RATE =  0.001
+CRITIC_LEARNING_RATE =  0.01
 
 
 def actor_critic(epochs=1000, GAMMA = 0.99, train_indicator=True, render=False, temp=False):
